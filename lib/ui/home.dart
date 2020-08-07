@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:media_player_app/ui/video.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 
 AudioPlayer audioPlayer = new AudioPlayer();
 var ap = new AudioCache(fixedPlayer: audioPlayer);
@@ -21,6 +22,7 @@ stop() {
 }
 
 home() {
+  FlutterStatusbarcolor.setStatusBarColor(Colors.pink.shade400);
   return MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
